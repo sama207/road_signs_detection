@@ -1,0 +1,5 @@
+path: C:/Users/ai_wo/OneDrive/Desktop/car_detection_project/Data2
+train: images/train
+val: images/test  
+nc: 3
+names: ['0','1','2']
