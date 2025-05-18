@@ -1,5 +1,7 @@
-path: C:/Users/ai_wo/OneDrive/Desktop/car_detection_project/Data2
+path: C:/Users/ai_wo/OneDrive/Desktop/road_signs_detection/Data2
 train: images/train
-val: images/test  
+val: images/train  
+test: images/test  
+
 nc: 3
-names: ['0','1','2']
+names: ['stop','right','left']
