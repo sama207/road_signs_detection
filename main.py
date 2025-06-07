@@ -17,8 +17,8 @@ def checking_gpu():
 
 def model_training(model,device):
     results = model.train(
-        project='YOLOv8-Experiments',
-        name="road_signs_train2",
+        project='YOLO11s-Experiments',
+        name="left_right_signs_train",
         data="config.yaml",        
         optimizer='AdamW',
         augment=True,
@@ -35,6 +35,9 @@ def model_training(model,device):
     )
 
     results = model.val()
+    return results
+
+def evaluation(results):
 
     # Print specific metrics
     print("Class indices with average precision:", results.ap_class_index)
@@ -59,9 +62,7 @@ def model_training(model,device):
     print("Specific precision metrics:", results.box.px)
     print("Recall:", results.box.r)
     print("Recall curve:", results.box.r_curve)
-    return results
-
-
+    
 def verify_yolo_labels_random(image_dir, label_dir, class_names, sample_limit=5):
     image_files = [f for f in os.listdir(image_dir) if f.endswith(('.jpg', '.png', '.jpeg'))]
     if len(image_files) == 0:
@@ -109,11 +110,12 @@ def main():
     # class_names=["stop", "right", "left"],
     # sample_limit=5
     # )
-    model = YOLO("yolov11s.pt")  
+    model = YOLO("yolo11s.pt")  
     device=checking_gpu()
 
     results = model_training(model,device)
 
+    evaluation(results)
 
 if __name__ == "__main__":
     main()
