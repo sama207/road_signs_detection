@@ -4,4 +4,4 @@ val: images/train
 test: images/test  
 
 nc: 3
-names: ['stop','right','left']
+names: ['stop',right','left']
