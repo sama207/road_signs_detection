@@ -1,7 +1,7 @@
-path: C:/Users/ai_wo/OneDrive/Desktop/road_signs_detection/Data2
+path: D:/Desktop/test/road_signs_detection/Data2
 train: images/train
 val: images/train  
 test: images/test  
 
 nc: 2
-names: ['stop','right_left']
+names: ['stop','right_right']
