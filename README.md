@@ -1,5 +1,4 @@
 # Road Signs Detection 🚦🛑  
-Repo: `sama207/road_signs_detection`
 
 A student-friendly computer vision project that builds an **end-to-end road sign pipeline**:
 
@@ -26,8 +25,6 @@ This repo contains notebooks for experiments + scripts for automation, along wit
   - `classified_output/` (classification outputs)
   - `cropped_cnn_dataset/` (cropped dataset)
   - `left_right_signs/` and `YOLO8m-Experiments/left_right_signs_train/` (dataset/experiments)
-
-> If you plan to push changes to GitHub, avoid committing large generated folders (`runs/`, datasets, model weights) unless you really need them.
 
 ---
 
